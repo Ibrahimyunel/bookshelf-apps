@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Bookshelf</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <h3 class="p-lg-2">My Bookshelf</h3>
+        </section>
+        <nav class="d-lg-none">
+            <a href="#add_book">Add Book</a>
+            <a href="#search_book">Search Book</a>
+        </nav>
+    </header>
+    <main class="d-lg-grid my-lg-5">
+        <article class="master">
+            <section class="add-book" id="add_book">
+                <h3>Add New Book</h3>
+                <form id="add_book_form" autocomplete="off">
+                    <input class="form-control mt-3" type="text" id="title" placeholder="Title" required>
+                    <input class="form-control mt-3" type="text" id="author" placeholder="Author" required>
+                    <input class="form-control mt-3" type="number" id="year" placeholder="Year" min="1000" max="9999" required>
+                    <label class="form-check-label mt-3" for="isComplete">
+                        <input class="form-check-input" type="checkbox" id="isComplete">
+                        I have finished reading this book
+                    </label>
+                    <button type="submit" class="btn btn-info d-block m-auto my-3 col-8">Add One</button>
+                </form>
+            </section>
+            <section class="search-book mt-3" id="search_book">
+                <div class="search-tool">
+                    <h3>Search Book</h3>
+                    <form>
+                        <input class="form-control" type="text" id="search_book_filter" placeholder="Enter the ID/Title/Author/Year">
+                    </form>
+                </div>
+            </section>
+        </article>
+        <article class="book-as-read" id="book_as_read">
+            <h3>Finished Reading</h3>
+        </article>
+        <article class="book-as-unread" id="book_as_unread">
+            <h3>Read In Progress</h3>
+        </article>
+    </main>
+
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
